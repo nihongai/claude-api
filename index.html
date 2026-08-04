@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude API 中转站 - 2026 年国内调用方案</title>
+  <meta name="description" content="通过 4zapi，您可以便捷地调用 https://4zapi.com/v1 的 Claude API，实现国内快速访问，助力项目开发。">
+  <meta name="keywords" content="Claude API 中转站,Claude Sonnet API,Claude Opus API 国内,Claude Code 中转,国内调用 Claude API">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:title" content="Claude API 中转站 - 2026 年国内调用方案">
+  <meta property="og:description" content="通过 4zapi，您可以便捷地调用 https://4zapi.com/v1 的 Claude API，实现国内快速访问，助力项目开发。">
+  <meta property="og:url" content="https://nihongai.github.io/claude-api/">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://nihongai.github.io/claude-api/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "4zapi",
+      "url": "https://4zapi.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nihongai.github.io/claude-api/#webpage",
+      "url": "https://nihongai.github.io/claude-api/",
+      "name": "Claude API 中转站 - 2026 年国内调用方案",
+      "description": "通过 4zapi，您可以便捷地调用 https://4zapi.com/v1 的 Claude API，实现国内快速访问，助力项目开发。",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "4zapi",
+        "url": "https://4zapi.com"
+      },
+      "dateModified": "2026-08-03",
+      "inLanguage": "zh-CN",
+      "about": "Claude"
+    },
+    {
+      "@type": "Article",
+      "headline": "Claude API 中转站 - 2026 年国内调用方案",
+      "description": "通过 4zapi，您可以便捷地调用 https://4zapi.com/v1 的 Claude API，实现国内快速访问，助力项目开发。",
+      "dateModified": "2026-08-03",
+      "author": {
+        "@type": "Organization",
+        "name": "4zapi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "4zapi",
+        "url": "https://4zapi.com"
+      },
+      "mainEntityOfPage": "https://nihongai.github.io/claude-api/",
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "国内怎么调 Claude API？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通过 4zapi 平台的 https://4zapi.com/v1 来进行国内调用，确保网络稳定。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 如何接入？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只需将 base_url 设置为 https://4zapi.com/v1，并在代码中灵活应用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Key 被封怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "立即联系 4zapi 客服进行处理，同时检查调用频率和使用规则。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude API 适合哪些场景？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "适合内容生成、智能推荐与复杂推理等多种应用场景。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何选择合适的 Claude 模型？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "根据具体任务需求选择，例如写作可以使用 Claude Sonnet，推理则选择 Claude Opus。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "API 调用限额如何管理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "定期审核调用情况，合理安排调用频率，必要时升级套餐。"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "国内调用 Claude API",
+  "description": "通过 4zapi OpenAI 兼容中转接入 Claude",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "注册并创建 Key",
+      "text": "打开 https://4zapi.com 注册账号，在控制台创建 API Key。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "设置 Base URL",
+      "text": "将 SDK 或客户端的 base_url 设为 https://4zapi.com/v1。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "发起请求",
+      "text": "使用模型 ID（示例 claude-sonnet-4）调用 /chat/completions。"
+    }
+  ]
+}
+  </script>
+  
+
+
+<script>
+window.__LG_TRACK__ = {
+  site: "claude-api",
+  ns: "nihongai",
+  badge: "https://visitor-badge.laobi.icu/badge"
+};
+function lgHostKey() {
+  try {
+    var h = String(location.hostname || "unknown").toLowerCase();
+    h = h.replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "");
+    return h || "unknown";
+  } catch (e) {
+    return "unknown";
+  }
+}
+function lgBump(kind) {
+  try {
+    var s = window.__LG_TRACK__ || {};
+    if (!s.ns || !s.site || !s.badge) return;
+    var pid = String(s.ns) + "." + lgHostKey() + "." + String(s.site) + (kind === "cta" ? ".cta" : "");
+    var img = new Image();
+    img.referrerPolicy = "no-referrer-when-downgrade";
+    img.src = String(s.badge) + "?page_id=" + encodeURIComponent(pid) + "&t=" + Date.now();
+  } catch (e) {}
+}
+function lgSend(eventName) {
+  try {
+    lgBump(eventName === "cta" ? "cta" : "pv");
+  } catch (e) {}
+}
+function lgTrackCta() { lgSend("cta"); }
+document.addEventListener("DOMContentLoaded", function () {
+  lgSend("pageview");
+  document.querySelectorAll("a.js-cta-track").forEach(function (a) {
+    a.addEventListener("click", lgTrackCta);
+  });
+});
+</script>
+
+  <style>
+    :root {
+      --bg: #07090f;
+      --panel: rgba(18, 22, 36, .88);
+      --line: rgba(148, 163, 184, .16);
+      --text: #e8eefc;
+      --muted: #93a4c3;
+      --accent: #5eead4;
+      --accent-2: #a3e635;
+      --glow: rgba(94, 234, 212, .18);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text);
+      font-family: "Space Grotesk", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(1000px 500px at 10% -10%, rgba(94,234,212,.16), transparent 55%),
+        radial-gradient(800px 420px at 90% 0%, rgba(163,230,53,.1), transparent 50%),
+        var(--bg);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    a { color: var(--accent); }
+    .grid-bg {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(rgba(148,163,184,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    }
+    .app { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+    .side {
+      position: sticky; top: 0; height: 100vh; padding: 28px 18px;
+      border-right: 1px solid var(--line);
+      background: rgba(7,9,15,.72); backdrop-filter: blur(16px);
+    }
+    .mark {
+      width: 36px; height: 36px; border-radius: 12px; margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--accent), #22d3ee 40%, var(--accent-2));
+      box-shadow: 0 0 30px var(--glow);
+    }
+    .side .brand { font-weight: 700; font-size: 1.15rem; letter-spacing: -.02em; }
+    .side .sub {
+      color: var(--muted); font-size: 12px; margin: 4px 0 24px;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .side nav a {
+      display: block; text-decoration: none; color: var(--muted);
+      padding: 10px 12px; border-radius: 10px; margin: 2px 0; font-size: 14px; font-weight: 500;
+      transition: background .15s ease, color .15s ease;
+    }
+    .side nav a:hover { background: rgba(94,234,212,.08); color: #fff; }
+    .side .cta {
+      display: block; margin-top: 22px; text-align: center; text-decoration: none;
+      padding: 12px 14px; border-radius: 12px; font-weight: 700; color: #041016 !important;
+      background: linear-gradient(135deg, var(--accent), #99f6e4);
+      box-shadow: 0 10px 30px var(--glow);
+    }
+    .main { padding: 40px 42px 100px; max-width: 980px; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 500;
+      padding: 6px 12px; border-radius: 999px; color: var(--accent);
+      border: 1px solid rgba(94,234,212,.35); background: rgba(94,234,212,.08);
+    }
+    .pill i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    h1 {
+      font-size: clamp(1.85rem, 3.2vw, 2.6rem); line-height: 1.18;
+      letter-spacing: -.03em; margin: 16px 0 14px; font-weight: 700;
+      animation: in .6s ease both;
+    }
+    @keyframes in {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    .answer {
+      border: 1px solid var(--line); border-radius: 22px; padding: 24px;
+      background:
+        linear-gradient(180deg, rgba(94,234,212,.08), transparent 40%),
+        var(--panel);
+      box-shadow: 0 30px 80px rgba(0,0,0,.35);
+      margin-bottom: 26px; animation: in .6s ease .05s both;
+    }
+    .answer p { margin: 0 0 12px; color: #c9d4ea; }
+    .answer strong { color: #fff; }
+    .meta-line {
+      display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 16px;
+      font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted);
+    }
+    .meta-line span {
+      background: rgba(255,255,255,.03); border: 1px solid var(--line);
+      padding: 7px 10px; border-radius: 10px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 18px; border-radius: 12px; font-weight: 700; text-decoration: none;
+      transition: transform .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-main { background: linear-gradient(135deg, var(--accent), #99f6e4); color: #041016 !important; }
+    .btn-ghost { border: 1px solid var(--line); color: var(--text) !important; background: transparent; margin-left: 8px; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 18px; }
+    .card, .block {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px;
+    }
+    .block { padding: 26px; margin: 16px 0; }
+    .card h3, .block h2 { margin: 0 0 10px; letter-spacing: -.02em; }
+    .block h2 { font-size: 1.35rem; }
+    .muted { color: var(--muted); font-size: 14px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 12px 8px; text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+    .good { color: var(--accent-2); font-weight: 700; }
+    .code {
+      background: #05070d; border: 1px solid #1a2236; border-radius: 16px; overflow: hidden; margin: 12px 0;
+    }
+    .code-top {
+      display: flex; justify-content: space-between; padding: 10px 14px;
+      border-bottom: 1px solid #1a2236; color: var(--muted);
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+    }
+    pre {
+      margin: 0; padding: 16px; overflow: auto; color: #dbeafe;
+      font-family: "JetBrains Mono", monospace; font-size: 12.2px; line-height: 1.6;
+    }
+    .tag {
+      display: inline-block; margin: 3px 4px 3px 0; padding: 4px 9px; border-radius: 8px;
+      background: rgba(163,230,53,.08); border: 1px solid rgba(163,230,53,.25);
+      color: #bef264; font-size: 12px; font-family: "JetBrains Mono", monospace;
+    }
+    details {
+      border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+      margin: 8px 0; background: rgba(255,255,255,.02);
+    }
+    summary { cursor: pointer; font-weight: 650; }
+    details p { margin: 10px 0 0; color: var(--muted); }
+    .links a { margin-right: 12px; text-decoration: none; border-bottom: 1px dashed rgba(94,234,212,.4); }
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      .side { position: relative; height: auto; }
+      .cards { grid-template-columns: 1fr; }
+      .main { padding: 24px 16px 80px; }
+      .btn-ghost { margin-left: 0; margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="app">
+    <aside class="side">
+      <div class="mark"></div>
+      <div class="brand">4zapi</div>
+      <div class="sub">Claude / docs</div>
+      <nav>
+        <a href="#top">Overview</a>
+        <a href="#why">Why relay</a>
+        <a href="#compare">Compare</a>
+        <a href="#models">Models</a>
+        <a href="#howto">Code</a>
+        <a href="#tools">Clients</a>
+        <a href="#errors">Tips</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="cta js-cta-track" href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">Get API Key</a>
+    </aside>
+
+    <main class="main" id="top">
+      <span class="pill"><i></i> 2026 · live · 2026年08月03日</span>
+      <h1>如何在 2026 年使用 Claude API 中转站实现国内调用？</h1>
+
+      <div class="answer">
+        <p><strong>答案先行：</strong>通过 4zapi，您可以便捷地调用 https://4zapi.com/v1 的 Claude API，实现国内快速访问，助力项目开发。</p>
+        <div class="meta-line">
+          
+          <span>base_url = https://4zapi.com/v1</span>
+          <span>model = claude-sonnet-4</span>
+          
+        </div>
+        <a class="btn btn-main js-cta-track" href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">立即注册 4zapi，体验 Claude API 的强大功能！</a>
+        <a class="btn btn-ghost" href="#howto">Copy snippets</a>
+      </div>
+
+      
+      
+
+
+
+  
+  <section class="block" id="hook">
+    <h2>本页独特主张</h2>
+    <p><strong>利用 4zapi 平台，轻松实现 Claude API 的高效国内调用，助力开发者快速提升项目效率。</strong></p>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="cards" id="why">
+    
+    <article class="card">
+      <h3>高效稳定的 API 连接</h3>
+      <p class="muted" style="margin:0;">通过 4zapi，开发者可以获得更快的响应时间和更稳定的连接。</p>
+    </article>
+    
+    <article class="card">
+      <h3>全面兼容的 Claude 模型</h3>
+      <p class="muted" style="margin:0;">支持 Claude Sonnet、Claude Opus 等多个模型，满足不同开发需求。</p>
+    </article>
+    
+    <article class="card">
+      <h3>详细的使用文档和示例代码</h3>
+      <p class="muted" style="margin:0;">提供丰富的文档支持，帮助开发者快速上手。</p>
+    </article>
+    
+    <article class="card">
+      <h3>安全可靠的 API Key 管理</h3>
+      <p class="muted" style="margin:0;">通过环境变量等方式，确保 API Key 的安全性。</p>
+    </article>
+    
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="about">
+    <h2>Claude API 中转是什么</h2>
+    <p>在 2026 年，Claude API 已成为开发者进行写作、推理和编程的主要工具之一。本文将详细介绍如何通过 4zapi 平台使用 Claude API，避免常见的错误，并提供开发者友好的使用指南。 入口：<a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">4zapi API中转站</a>。</p>
+    <p class="muted"><strong>谁适合用：</strong>当您需要进行自然语言处理、复杂推理或编程辅助时，Claude API 是理想的选择。通过 4zapi 的中转站，您可以确保在国内环境下获取更稳定的访问体验。</p>
+    <p class="muted"><strong>和其他方式比：</strong>与其他 API 相比，Claude API 在自然语言理解和生成方面的表现更为出色。同时，它的中转方案提供了更加稳定和快速的连接。</p>
+    <span class="tag">Claude API 中转站</span><span class="tag">Claude Sonnet API</span><span class="tag">Claude Opus API 国内</span><span class="tag">Claude Code 中转</span><span class="tag">国内调用 Claude API</span>
+    <ul>
+      
+      <li>频繁的 API 调用限额问题，导致开发进度延误。</li>
+      
+      <li>在国内环境下直接调用可能遇到的延迟与不稳定性。</li>
+      
+      <li>缺乏关于 Claude API 使用的详细文档与示例。</li>
+      
+      <li>对于不同任务需求选择模型的困惑。</li>
+      
+    </ul>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="case">
+    <h2>真实使用案例</h2>
+    <p>开发者小张负责开发一款智能写作应用。通过修改 base_url 为 https://4zapi.com/v1，他顺利集成 Claude API，实现了快速生成文章和智能推荐功能，大幅提升了开发效率。</p>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="howto-steps">
+    <h2>使用 4zapi 平台的 Claude API，您只需简单几步：注册账号、获取 API Key、设置 base_url，即可开始您的开发之旅。</h2>
+    
+    <p><strong>01 注册并获取 API Key</strong><br><span class="muted">访问 4zapi 官网，注册账号并获取 API Key。</span></p>
+    
+    <p><strong>02 设置 base_url</strong><br><span class="muted">在代码中设置 API 的 base_url 为 https://4zapi.com/v1。</span></p>
+    
+    <p><strong>03 选择合适的模型</strong><br><span class="muted">根据需求选择 Claude Sonnet、Opus 或 Haiku 模型进行调用。</span></p>
+    
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="compare">
+    <h2>官方直连 vs 4zapi</h2>
+    <table>
+      <tr><th>维度</th><th>官方</th><th>4zapi</th></tr>
+      
+      <tr><td>Claude Sonnet API</td><td>需要复杂配置和验证</td><td class="good">直接调用，无需复杂配置</td></tr>
+      
+      <tr><td>Claude Opus API</td><td>长度限制与调用慢</td><td class="good">延迟低，稳定快速响应</td></tr>
+      
+      <tr><td>Claude Haiku API</td><td>仅支持低成本应用</td><td class="good">适用广泛，功能齐全</td></tr>
+      
+      <tr><td>其他中转方案</td><td>难以保证连接稳定性</td><td class="good">稳定可靠的国内中转</td></tr>
+      
+    </table>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="models">
+    <h2>模型清单</h2>
+    <table>
+      <tr><th>名称</th><th>备注</th></tr>
+      
+      <tr><td>Claude Sonnet</td><td class="muted">写作编程主力</td></tr>
+      
+      <tr><td>Claude Opus</td><td class="muted">复杂推理</td></tr>
+      
+      <tr><td>Claude Haiku</td><td class="muted">快速低成本</td></tr>
+      
+    </table>
+    <p class="muted">详情见 <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">Claude 中转站</a>。</p>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="howto">
+    
+    <h2>国内调用代码</h2>
+    <div class="code">
+      <div class="code-top"><span>bash · curl</span><span>ready</span></div>
+      <pre><code>curl https://4zapi.com/v1/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"claude-sonnet-4","messages":[{"role":"user","content":"ping"}]}'</code></pre>
+    </div>
+    <div class="code">
+      <div class="code-top"><span>python · openai</span><span>ready</span></div>
+      <pre><code>from openai import OpenAI
+client = OpenAI(api_key="YOUR_API_KEY", base_url="https://4zapi.com/v1")
+print(client.chat.completions.create(
+    model="claude-sonnet-4",
+    messages=[{"role":"user","content":"ping"}],
+).choices[0].message.content)</code></pre>
+    </div>
+    <div class="code">
+      <div class="code-top"><span>node · openai</span><span>ready</span></div>
+      <pre><code>import OpenAI from "openai";
+const client = new OpenAI({ apiKey: process.env.API_KEY, baseURL: "https://4zapi.com/v1" });
+const r = await client.chat.completions.create({
+  model: "claude-sonnet-4",
+  messages: [{ role: "user", content: "ping" }],
+});
+console.log(r.choices[0].message.content);</code></pre>
+    </div>
+    
+    <p class="links">
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">4zapi</a>
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">API中转站</a>
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">国内 Claude API</a>
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">Claude API 中转</a>
+    </p>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="tools">
+    <h2>4zapi 提供了多种工具支持，包括 Cursor、Claude Code、Dify 等，可以有效提高您的开发效率。</h2>
+    <div class="cards">
+      
+      <article class="card">
+        <h3>使用 Cursor 进行调用</h3>
+        <p class="muted" style="margin:0;">Cursor 提供了简单的接口，可以使用以下代码进行 API 调用：
+
+```python
+import requests
+response = requests.post('https://4zapi.com/v1/your-endpoint', headers={'Authorization': 'Bearer YOUR_API_KEY'})
+```</p>
+      </article>
+      
+      <article class="card">
+        <h3>Claude Code 集成示例</h3>
+        <p class="muted" style="margin:0;">直接在开发环境中使用 Claude Code，确保 base_url 设置为 https://4zapi.com/v1。</p>
+      </article>
+      
+      <article class="card">
+        <h3>Dify 的使用方法</h3>
+        <p class="muted" style="margin:0;">通过 Dify 集成 Claude API，确保 API Key 的正确配置。</p>
+      </article>
+      
+      <article class="card">
+        <h3>Cherry Studio 应用场景</h3>
+        <p class="muted" style="margin:0;">在 Cherry Studio 中，利用 Claude API 提高文本生成效率，具体方法参考官方文档。</p>
+      </article>
+      
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="mistakes">
+    <h2>本意图常见误区</h2>
+    <ol>
+      
+      <li>确保 API Key 不被泄露，使用环境变量存储。</li>
+      
+      <li>检查 base_url 是否正确，必须使用 https://4zapi.com/v1。</li>
+      
+      <li>确保使用的模型 ID 与 Claude API 官方文档中的一致，以避免调用不兼容的模型。</li>
+      
+    </ol>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="errors">
+    <h2>报错速查</h2>
+    
+    <p><code style="color:var(--accent-2)">401</code><br><span class="muted">检查 API Key 是否正确，并确保未过期。</span></p>
+    
+    <p><code style="color:var(--accent-2)">429</code><br><span class="muted">请降低调用频率，或者申请更高的调用额度。</span></p>
+    
+    <p><code style="color:var(--accent-2)">insufficient_quota</code><br><span class="muted">确认您的账户余额和调用额度，必要时进行充值。</span></p>
+    
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="faq">
+    <h2>FAQ</h2>
+    
+    <details open>
+      <summary>国内怎么调 Claude API？</summary>
+      <p>通过 4zapi 平台的 https://4zapi.com/v1 来进行国内调用，确保网络稳定。</p>
+    </details>
+    
+    <details >
+      <summary>Claude Code 如何接入？</summary>
+      <p>只需将 base_url 设置为 https://4zapi.com/v1，并在代码中灵活应用。</p>
+    </details>
+    
+    <details >
+      <summary>Key 被封怎么办？</summary>
+      <p>立即联系 4zapi 客服进行处理，同时检查调用频率和使用规则。</p>
+    </details>
+    
+    <details >
+      <summary>Claude API 适合哪些场景？</summary>
+      <p>适合内容生成、智能推荐与复杂推理等多种应用场景。</p>
+    </details>
+    
+    <details >
+      <summary>如何选择合适的 Claude 模型？</summary>
+      <p>根据具体任务需求选择，例如写作可以使用 Claude Sonnet，推理则选择 Claude Opus。</p>
+    </details>
+    
+    <details >
+      <summary>API 调用限额如何管理？</summary>
+      <p>定期审核调用情况，合理安排调用频率，必要时升级套餐。</p>
+    </details>
+    
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="related">
+    <h2>相关指南</h2>
+    <p class="links">
+      
+      <a href="https://4zapi.com?utm_source=related&utm_medium=referral&utm_campaign=gpt">GPT / ChatGPT API 指南</a>
+      
+      <a href="https://4zapi.com?utm_source=related&utm_medium=referral&utm_campaign=gemini">Gemini API 指南</a>
+      
+      <a href="https://4zapi.com?utm_source=related&utm_medium=referral&utm_campaign=deepseek">DeepSeek API 指南</a>
+      
+      <a href="https://4zapi.com?utm_source=related&utm_medium=referral&utm_campaign=grok">Grok API 指南</a>
+      
+      <a href="https://4zapi.com?utm_source=related&utm_medium=referral&utm_campaign=sora">Sora API 指南</a>
+      
+    </p>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="block" id="cta">
+    <h2>开始使用 Claude API 中转站</h2>
+    <p>
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">大模型API聚合</a> /
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">4zapi 官网</a> /
+      <a href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">https://4zapi.com</a>
+    </p>
+    <a class="btn btn-main js-cta-track" href="https://4zapi.com?utm_source=satellite-claude&utm_medium=referral&utm_campaign=claude">立即注册 4zapi，体验 Claude API 的强大功能！</a>
+    <p class="muted" style="margin-top:16px;">最后更新：2026年08月03日 · 公开署名：4zapi</p>
+  </section>
+  
+
+
+
+    </main>
+  </div>
+</body>
+</html>
